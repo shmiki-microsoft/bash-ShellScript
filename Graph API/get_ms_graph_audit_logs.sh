@@ -5,7 +5,7 @@ clientId="<client-id>"
 clientSecret="<client-secret>"
 tenantId="<tenant-id>"
 resource="https://graph.microsoft.com"
-endpoint="https://graph.microsoft.com/v1.0/auditLogs/signIns"
+endpoint="https://graph.microsoft.com/v1.0/auditLogs/directoryAudits"
 
 # アクセストークンを取得
 token=$(curl -s -X POST -d "client_id=$clientId&scope=$resource/.default&client_secret=$clientSecret&grant_type=client_credentials" https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token | jq -r '.access_token')
